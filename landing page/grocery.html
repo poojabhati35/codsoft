@@ -1,0 +1,300 @@
+<!DOCTYPE html>                    grocery 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fresh Grocery | 15-Min Delivery</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+    }
+
+    /* Header */
+    header {
+      width: 100%;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #f8f8f8;
+      border-bottom: 2px solid #f1513c;
+    }
+
+    .logo {
+      font-size: 26px;
+      font-weight: bold;
+      color: #f1513c;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #5d0a04;
+      font-size: 16px;
+      text-transform: uppercase;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #f1513c;
+      border-bottom: 2px solid #f1513c;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: url(images/image/veggis.png.png) no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 60px;
+      color: #fff;
+    }
+
+    .hero-content {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 10px;
+      max-width: 500px;
+    }
+
+    .hero-content h1 {
+      color: #5d0a04;
+      font-size: 48px;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero-content h1 span {
+      color: #f1513c;
+    }
+
+    .hero-content p {
+      color: #333;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+    }
+
+    .buttons a {
+      padding: 12px 30px;
+      text-decoration: none;
+      color: #fff;
+      background-color: #f1513c;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .buttons a:hover {
+      background-color: #d1402c;
+    }
+
+    .buttons a.secondary {
+      background-color: transparent;
+      color: #f1513c;
+      border: 2px solid #f1513c;
+    }
+
+    .buttons a.secondary:hover {
+      background-color: #f1513c;
+      color: #fff;
+    }
+
+    /* Product and Cart */
+    #products, #cart, #confirmation {
+      padding: 40px 60px;
+    }
+
+    .product {
+      background: #fff9f7;
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid #f1d6d0;
+      border-radius: 8px;
+      font-size: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .product button {
+      background-color: #f1513c;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .product button:hover {
+      background-color: #d1402c;
+    }
+
+    #cart-items {
+      margin-top: 10px;
+      list-style: none;
+    }
+
+    #cart-items li {
+      margin-bottom: 5px;
+    }
+
+    #cart button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #44c767;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #cart button:hover {
+      background-color: #3aa557;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+      }
+
+      .hero-content {
+        padding: 30px 20px;
+      }
+
+      nav ul {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">FreshGrocery</div>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#cart">Cart</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Fresh Groceries<br><span>In 15 Minutes</span></h1>
+      <p>We deliver your favorite groceries fast, fresh, and on time. Order now and enjoy doorstep delivery!</p>
+      <div class="buttons">
+        <a href="#products">Order Now</a>
+        <a href="#cart" class="secondary">View Cart</a>
+      </div>
+    </div>
+  </section>
+  
+  <section id="products">
+    <h2>Choose Your Products</h2>
+    <div class="product">
+      🍎 Apples - $2
+      <button onclick="addToCart('Apples', 2)">Add</button>
+    </div>
+    <div class="product">
+      🥛 Milk - $3
+      <button onclick="addToCart('Milk', 3)">Add</button>
+    </div>
+    <div class="product">
+      🍞 Bread - $2.5
+      <button onclick="addToCart('Bread', 2.5)">Add</button>
+    </div>
+  </section>
+
+  <section id="cart">
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="total">0.00</span></p>
+    <button onclick="placeOrder()">Place Order</button>
+  </section>
+
+  <section id="confirmation" class="hidden">
+    <h2>Order Confirmed!</h2>
+    <p>Your groceries will arrive in <strong>15 minutes</strong>. Thank you for shopping with FreshGrocery!</p>
+  </section>
+
+  <section id="contact" style="padding: 40px 60px; background-color: #fff9f7;">
+  <h2>Contact Us</h2>
+  <p>If you have any questions, suggestions, or feedback, feel free to reach out to us. We’d love to hear from you!</p>
+  <form onsubmit="submitContactForm(event)" style="margin-top: 20px; max-width: 600px;">
+    <div style="margin-bottom: 15px;">
+      <input type="text" placeholder="Your Name" required style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc;" />
+    </div>
+    <div style="margin-bottom: 15px;">
+      <input type="email" placeholder="Your Email" required style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc;" />
+    </div>
+    <div style="margin-bottom: 15px;">
+      <textarea rows="4" placeholder="Your Message" required style="width: 100%; padding: 10px; border-radius: 6px; border: 1px solid #ccc;"></textarea>
+    </div>
+    <button type="submit" style="padding: 12px 30px; background-color: #f1513c; color: white; border: none; border-radius: 6px; cursor: pointer;">Send Message</button>
+  </form>
+</section>
+
+  <!-- JavaScript -->
+  <script>
+    const cart = [];
+    let total = 0;
+
+    function addToCart(name, price) {
+      cart.push({ name, price });
+      total += price;
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const cartItems = document.getElementById('cart-items');
+      cartItems.innerHTML = '';
+      cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - $${item.price}`;
+        cartItems.appendChild(li);
+      });
+      document.getElementById('total').textContent = total.toFixed(2);
+    }
+
+    function placeOrder() {
+      if (cart.length === 0) {
+        alert("Your cart is empty!");
+        return;
+      }
+
+      document.getElementById('cart').classList.add('hidden');
+      document.getElementById('confirmation').classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
