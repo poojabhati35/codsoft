@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pooja |Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+</head>
+<body>
+  <div id = "header">
+    <div class = "container">
+      <nav > <img src="images/image/logo.png.jpg" class ="logo">
+        <ul>
+          <li><a href="#header"> Home</a></li>
+          <li><a href="#about"> About</a></li>
+          <li><a href="#project"> Project</a></li>
+           <li><a href="#experience"> Experience</a></li>
+           <li><a href="#Certificate"> Certificate</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-text">
+        <p>Web Developer</p>
+        <h1>Hey! I'm <span>Pooja Bhati</span><br>BCA Student</h1>
+      </div>
+    </div>
+  </div>
+  <!-- -----about----- -->
+  
+  <div id = "about">
+    <div class = "container">
+      <div class="row">
+        <div class="about-col-1">
+          <img src ="images/image/2ndimage.png.jpg">
+        </div>
+        <div class ="about-col-2">
+          <h1 class = "sub-title">About Me</h1><br><br>
+          <p>📂I'm Pooja Bhati, a passionate BCA student at Manav Rachna International Institute of Research and Studies.<br><br>
+            💻 Over time, I’ve developed skills in HTML, CSS, JavaScript, Java, C, and basic Python, and I’m exploring frameworks and tools that help create dynamic, user-friendly websites and applications. <br><br>
+             🐾Along with coding, I enjoy video editing, which allow me to express creativity beyond the screen. <br><br>
+             🚀 My career goal is to become a Web developer or UI/UX designer, combining logic with creativity to build meaningful user experiences. </p>
+             <div class ="tab-title">
+              <p class ="tab-links active-link"onclick="opentab('Skills')">Skills</p>
+             </div>
+             <div class ="tab-contents active-tab" id = "Skills">
+              <ul><li><span>UI/UX</span><br>Designing Web application interface</li>
+              <li><span>HTML, CSS, JavaScript</span><br> web developer and UI styling</li>
+              <li><span>Video Editing</span><br>Basic editing using CapCut, VN, or mobile apps</li>
+             </ul>
+             </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-----PROJECT------>
+  <div id ="project">
+    <div class = "container">
+      <h1 class = "sub-title">My Project</h1>
+      <div class ="project-list">
+<div>
+  <h2>Grocery in 15 Minutes</h2>
+  <p> "Fresh groceries delivered to your doorstep in just 15 minutes. build for speed. designed for freshness." </p>
+     <a href ="https://github.com/poojabhati35"> Learn more</a>
+</div>
+<div>
+  <h2>Smart Calculator</h2>
+  <p>A basic yet efficient calculator built with JavaScript that handles arithmetic operations with a user-friendly interface..</p>
+     <a href ="https://github.com/poojabhati35"> Learn more</a>
+</div>
+<div>
+  <h2>Personal Portfolio Website</h2>
+  <p>A responsive and creative portfolio website showcasing
+     my skills, projects, experience, and contact information with a modern dark-red theme.
+</p>
+     <a href ="https://github.com/poojabhati35"> Learn more</a>
+</div>
+      </div>
+    </div>
+  </div>
+  <!-----EXPERIENCE------->
+  <div id = "experience">
+    <div class = "container">
+      <h1 class ="sub-title">My Experience</h1>
+      <div class = "work-list">
+        <div class="work">
+          <img src="images/image/codsoft.png.jpg" alt="Experience" onclick="openPopup(this)">
+          <div class="layer">
+            <h3>CODSOFT</h3>
+            <P><span>Web Development Intern</span> <br> 1 July to 30th July<br>Worked as a Web Development Intern at CodSoft, focusing on designing responsive and visually engaging frontend interfaces.
+Gained hands-on experience with HTML, CSS, and JavaScript to build interactive web pages .</P>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Popup Overlay -->
+<div id="imagePopup" class="popup">
+  <span class="close" onclick="closePopup()">&times;</span>
+  <img class="popup-content" id="popupImg">
+</div>
+  <!----Certificate------->
+  <div id = "Certificate">
+    <div class = "container">
+      <h1 class ="sub-title">My Certificate</h1>
+      <div class = "certificate-list">
+        <div class="certificate">
+          <img src="images/image/cybersecurity.png.jpg">
+          <div class="certify">
+            <h4>Cyber security 
+
+
+
+            </h4>
+            <P>Completed a foundational course in Cyber Security covering key concepts like network security, ethical hacking, and data protection.
+              Developed an understanding of cyber threats, safe browsing practices, and basic defense mechanisms against online attacks.</P>
+<a href = "#"></a>
+          </div>
+        </div>
+         <div class="certificate">
+          <img src="images/image/certificate.png.jpg">
+          <div class="certify">
+            <h4>Data analyst</h4>
+            <P>Completed a foundational course in Data Analyst covering key concepts like Data modelling , Data Analysis , Tableau , Spreadsheet .
+              Developed interactive dashboards in Power BI/Tableau to provide real-time insights for cross-functional teams</P>
+<a href = "#"></a>
+      </div>
+    </div>
+    <div class="certificate">
+          <img src="images/image/ARlens.png.jpg">
+          <div class="certify">
+            <h4>Hack with INDIA</h4>
+            <P>Participated in a collaborative hack with INDIA focused on creative and building SNAPCHAT AR lenses.
+Worked in a team to design and prototype a functional lenses .</P>
+<div class="see-more-container">
+      <a href="https://drive.google.com/drive/folders/1tnuUhBpkv3PcxVSMr0h9K7vEIxYuOsjU" target="_blank" class="see-more-btn">See More</a>
+      </div>
+    </div>
+  </div>
+  </div>
+  <!-- Contact Section -->
+<div id="contact">
+  <div class="container">
+   <h1 class ="sub-title">Contact Me</h1>
+    <div class="contact-box">
+      <div class="contact-left">
+        <p><a href="mailto:poojabhati0008@gmail.com"> poojabhati0008@gmail.com</a></p>
+        <p><a href="tel:7988408238"> 7988408238</a></p>
+
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/pooja-bhati-48206"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/poojabhati35"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/poojaa.bhatii"><i class="fab fa-instagram"></i></a>
+        </div>
+        <a href="content/resume.pdf" target="_blank" class="btn btn2">Download CV</a>
+      </div>
+
+      <div class="contact-right">
+        <form>
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" rows="5" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+  </body>
+</html>
